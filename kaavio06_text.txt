@@ -1,0 +1,24 @@
+title 0.6: Uusi muistiinpano
+
+note over selain:
+Käyttäjä kirjoittaa jotain tekstikenttään
+end note
+
+note over selain:
+Selaimen javascript koodi lähettää
+pyynnön palvelimelle
+end note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over palvelin:
+Palvelin käsittelee vastaanotetun datan
+ja lähettää selaimelle JSON-tyyppisen vastauksen
+end note
+
+palvelin --> selain: JSON
+
+note over selain:
+Selaimen javascript koodi lisää
+vastaanotetun datan notes-listaan
+end note

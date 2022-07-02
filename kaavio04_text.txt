@@ -1,0 +1,26 @@
+title 0.4: uusi muistiinpano
+
+note over selain:
+Käyttäjä kirjoittaa jotain tekstikenttään
+end note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over palvelin:
+Palvelin lisää POST-pyynnön runkona olevan 
+datan ja päivämäärän notes taulukkoon ja 
+lähettää REDIRECT pyynnön.
+end note
+
+palvelin --> selain: REDIRECT https://studies.cs.helsinki.fi/exampleapp/notes
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin --> selain:  notes.html
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin --> selain: main.css
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin --> selain: main.js
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin --> selain: data.json
